@@ -42,6 +42,7 @@ export default ( state, action ) => {
                 user    : null,
                 msg     : action.payload,
                 loading : false,
+                enabled : false
             }
         default: 
             return state;

@@ -425,6 +425,14 @@ aside  {
   background-color: var(--gris2);
   color: var(--blanco);
 }
+
+.btn-primario:disabled{
+  cursor: not-allowed;
+  background-color: #e1e1e1;
+  color: #000000;
+}
+
+
 .btn-editar {
   background-color: var(--naranja);
   color: var(--blanco);
@@ -446,9 +454,7 @@ aside  {
   margin: 10px auto;
   width: 100%;
 }
-.btn-primario:hover {
-  background: var(--gris3);
-}
+
 .btn-secundario {
   background-color: var(--gris1);
 }
@@ -480,7 +486,6 @@ aside  {
 .form-usuario {
   background-color: var(--gris2);
   height: 100vh;
-  min-height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;

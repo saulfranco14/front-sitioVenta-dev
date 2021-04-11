@@ -23,6 +23,7 @@ const AuthState = ( props ) => {
         user    : null,
         msg     : null,  
         loading : true,  
+        enabled : false,
     }
 
     const [state, dispatch] = useReducer( authReducer, initialState );
@@ -70,6 +71,7 @@ const AuthState = ( props ) => {
 
     // LOGIN USER 
     const loginUser = async( data ) => {
+        
         try {
             const response = await clientAxios.post('/api/auth', data);
             dispatch({
@@ -81,8 +83,8 @@ const AuthState = ( props ) => {
 
         } catch (error) {
 
-            
             if (typeof error.response === 'undefined') {
+                
                 Swal.fire({
                     position            : 'center',
                     icon                : 'error',
@@ -90,6 +92,7 @@ const AuthState = ( props ) => {
                     width               : '40rem',
                     showConfirmButton   : true
                 });
+
             }else{
                 const alert = {
                     msg         : error.response.data.msg,
@@ -100,6 +103,7 @@ const AuthState = ( props ) => {
                     payload : alert
                 })
             }
+            return initialState;
             
         }
     }
@@ -118,6 +122,7 @@ const AuthState = ( props ) => {
                 user    : state.user,
                 msg     : state.msg,
                 loading : state.loading,
+                enabled : state.enabled,
                 registerUser,
                 getUserByAuth,
                 loginUser,

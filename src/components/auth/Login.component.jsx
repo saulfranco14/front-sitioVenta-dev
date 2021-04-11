@@ -10,13 +10,17 @@ const Login = ( props ) => {
     const { alert, viewAlert }  = alertContext;
   
     // Context Auth
-    const authContext               = useContext(AuthContext);
-    const { auth, msg, loginUser }  = authContext;
-  
+    const authContext                           = useContext(AuthContext);
+    const { auth, msg, loginUser, enabled }     = authContext;
+
+    // Disable Button
+    const [  enable, setDisable ] = useState(false)
+   
     // User Success
     useEffect(() => {
         if( auth ) props.history.push('/dashboard');
         if( msg )  viewAlert( msg.msg, msg.categoria );
+        setDisable(false)
     }, [ msg, auth, props.history ]);
   
     // User
@@ -35,12 +39,18 @@ const Login = ( props ) => {
     }
   
     const onSubmit = ( e ) => {
+        setDisable(true);
         e.preventDefault();
         if (email.trim() === '' || password.trim() === '' ) viewAlert( 'Todos los campos son obligatorios', 'alerta-error' ) ;
-        loginUser( { email, password } );
-    
+        loginUser( { email, password } ); 
+        
+        setTimeout( () => {
+            setDisable(false);
+        }, 5000)  
+
     }
 
+    
     return ( 
         <Fragment>
             <div className="form-usuario">
@@ -55,7 +65,7 @@ const Login = ( props ) => {
                     null
                 }
                 <div className="contenedor-form sombra-dark">
-                    <h2> Sistema Prenda</h2>
+                    <h2> Punto de Venta </h2>
                         <form
                             onSubmit={ onSubmit }
                         >
@@ -88,6 +98,7 @@ const Login = ( props ) => {
                                     type="submit"
                                     className="btn btn-primario btn-block"
                                     value="Iniciar Sesión"
+                                    disabled = { enable }
                                 />
                             </div>
                         </form>

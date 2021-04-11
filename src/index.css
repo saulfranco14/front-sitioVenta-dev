@@ -43,8 +43,10 @@ h1 {
 h2 {
   font-size: 2.4rem;
   margin-bottom: 15px;
+  color : var(--success);
 }
 h5{
+  color: var(--success);
   font-size: 2rem;
 }
 ul {
@@ -79,16 +81,13 @@ a {
   cursor: pointer;
 }
 .btn-primario {
-  background-color: var(--gris2);
+  background-color: var(--success);
   color: var(--blanco);
 }
 .btn-eliminar {
   background-color: var(--rojo);
   color: var(--blanco);
 
-}
-.btn-primario:hover {
-  background: var(--gris3);
 }
 .btn-secundario {
   background-color: var(--gris1);
@@ -306,7 +305,7 @@ aside  {
 }
 
 .form-usuario {
-    background-color: var(--gris2);
+    background-color: #ffff;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -421,10 +420,6 @@ aside  {
 .btn:hover {
   cursor: pointer;
 }
-.btn-primario {
-  background-color: var(--gris2);
-  color: var(--blanco);
-}
 
 .btn-primario:disabled{
   cursor: not-allowed;
@@ -482,14 +477,6 @@ aside  {
 }
 
 /* FORM */
-
-.form-usuario {
-  background-color: var(--gris2);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .form-create {
   background-color: var(--gris1);
   height: 100%;
@@ -498,6 +485,7 @@ aside  {
   justify-content: center;
 }
 .contenedor-form-create {
+  border: 6px solid #5cb85c;
   padding: 5rem 3rem;
   width: 95%;
   background-color: var(--blanco);

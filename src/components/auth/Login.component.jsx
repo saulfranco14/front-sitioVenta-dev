@@ -40,7 +40,7 @@ const Login = ( props ) => {
   
     const onSubmit = ( e ) => {
         setDisable(true);
-        e.preventDefault();
+        e.preventDefault(); 
         if (email.trim() === '' || password.trim() === '' ) viewAlert( 'Todos los campos son obligatorios', 'alerta-error' ) ;
         loginUser( { email, password } ); 
         
@@ -66,6 +66,7 @@ const Login = ( props ) => {
                 }
                 <div className="contenedor-form sombra-dark">
                     <h2> Punto de Venta </h2>
+                    <h5>Arte Flor</h5>
                         <form
                             onSubmit={ onSubmit }
                         >

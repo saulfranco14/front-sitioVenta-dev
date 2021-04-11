@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import RoutePrivate                               from './components/routes/RoutePrivate.component';
+import RouteAdmin                                 from './components/routes/RouteAdmin.component';
 import AlertState                                 from './context/alert/alertState';
 import AuthState                                  from './context/auth/authState';
 import ContactState                               from './context/contact/contactState';

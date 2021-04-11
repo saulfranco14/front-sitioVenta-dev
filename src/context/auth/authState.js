@@ -24,6 +24,7 @@ const AuthState = ( props ) => {
         msg     : null,  
         loading : true,  
         enabled : false,
+        role    : null,
     }
 
     const [state, dispatch] = useReducer( authReducer, initialState );
@@ -53,13 +54,14 @@ const AuthState = ( props ) => {
 
     // USER AUTH
     const getUserByAuth = async () =>{
+
         const token = localStorage.getItem('token');
         if(token) authToken(token) ;
         try {
             const response = await clientAxios.get('/api/auth');
             dispatch({
                 type    : GET_USER,
-                payload : response.data
+                payload : response.data,
             })
         } catch (error) {
             console.error(error);
@@ -123,6 +125,7 @@ const AuthState = ( props ) => {
                 msg     : state.msg,
                 loading : state.loading,
                 enabled : state.enabled,
+                role    : state.role,
                 registerUser,
                 getUserByAuth,
                 loginUser,

@@ -9,14 +9,14 @@ const Dashboard = () => {
     const { getUserByAuth  }    = authToken;
 
     useEffect(() => {
-        getUserByAuth();
+        // getUserByAuth();
 
         // eslint-disable-next-line
     }, [])
     return ( 
         <Fragment>
             <div className="contenedor-app">
-                <Sidebar/>
+                {/* <Sidebar/> */}
                 <div className="seccion-principal">
                     <Header/>
                     <main>

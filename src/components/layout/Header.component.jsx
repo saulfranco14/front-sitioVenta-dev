@@ -7,8 +7,7 @@ const Header = () => {
     const { user, getUserByAuth, logoutUser  }      = authToken;
 
     useEffect(() => {
-        getUserByAuth();
-        
+        // getUserByAuth();
         // eslint-disable-next-line
     }, [])
 

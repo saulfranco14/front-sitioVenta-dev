@@ -10,14 +10,21 @@ const RoutePrivate = ( { component : Component, ...props } ) => {
 
     useEffect(() => {
         getUserByAuth();
-
+        console.log("*** UE **** ");
+        console.log(auth);
+        console.log(loading);
+        console.log("*** UE **** ");
         // eslint-disable-next-line
     }, [])
 
+    console.log(" ******* ");
+    console.log(auth);
+    console.log(loading);
+    console.log(" ******* ");
     return ( 
         <Route 
             { ...props }
-            render = { props => !auth && !loading ? 
+            render = { props =>  !auth && !loading ? 
                 ( <Redirect to="/" /> ) 
                 :
                 ( <Component { ...props} /> )   

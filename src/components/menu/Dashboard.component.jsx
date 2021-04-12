@@ -16,14 +16,9 @@ const Dashboard = () => {
     return ( 
         <Fragment>
             <div className="contenedor-app">
-                {/* <Sidebar/> */}
                 <div className="seccion-principal">
                     <Header/>
-                    <main>
-                         <div className="contenedor-tareas">
-                           <h1>Dashboard</h1>
-                         </div>
-                    </main>
+                    <Sidebar/>
                 </div>
             </div>
         </Fragment>

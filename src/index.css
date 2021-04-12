@@ -56,11 +56,11 @@ ul {
 }
 a {
   text-decoration: none;
-  color: var(--gris2);
+  color: var(--blanco);
 }
 .cerrar-sesion{
   color: var(--blanco);
-  font-weight: bold;
+  font-weight: 900;
 }
 .textUppercase{
   text-transform: uppercase;
@@ -106,10 +106,6 @@ a {
       min-height: 100vh;
   }
 
-  aside {
-      background-color: var(--blanco);
-      flex: 0 0 300px;
-  }
   .seccion-principal {
       flex: 1;
   }
@@ -120,8 +116,14 @@ a {
 /* BARRA LATERAL */
 aside  {
   padding: 3rem;
+  width: 8rem;
+  height: 87.5%;
+  background-color: var(--success);
 }
 
+.MuiTooltip-tooltip {
+    font-size: 15px !important;
+}
 .formulario-nuevo-proyecto {
   margin-top: 6rem;
 }
@@ -133,9 +135,7 @@ aside  {
 .formulario-nuevo-proyecto .input-text::placeholder{
   color: var(--gris2);
 }
-.proyectos {
-  margin-top: 10rem;
-}
+
 .listado-proyectos li {
   margin-bottom: 2rem;
 }
@@ -147,13 +147,23 @@ aside  {
 }
 .app-header {
   display: flex;
-  
-  justify-content: flex-end;
+  height: 12.5%;
+  justify-content: space-between;
   background-color: var(--success);
   padding: 3rem 3rem 0rem 0rem;
 }
+.nav-header{
+  display: flex;
+  margin-left: 10rem;
+  margin-top: 2px;
+}
+/******** ICONS HEADER ***********/
+.MuiSvgIcon-root{
+  margin-top:2px;
+}
 .nombre-usuario {
   color: var(--blanco);
+  margin-top: 2px;
   font-size: 2.0rem;
   margin-right: 5px;
   text-transform: capitalize ;
@@ -321,6 +331,7 @@ aside  {
     width: 95%;
     background-color: var(--blanco);
     border-radius: 1rem;
+    border: 2px solid var(--success);
 }
 
 .campo-form {
@@ -469,9 +480,12 @@ aside  {
 }
 .btn-blank {
   display: flex;
-  margin: 5px 0px 0px 30px;
-  padding: 0;
-  background-color: transparent;
+  align-items: center;
+  margin: 0px 0px 0px 30px;
+  padding: 10px;
+  background-color: var(--rojo);
+  width: 120px;
+  height: 30px;
 }
 .marginButton{
   margin-top: 4rem;
@@ -488,7 +502,6 @@ aside  {
   justify-content: center;
 }
 .contenedor-form-create {
-  border: 6px solid #5cb85c;
   padding: 5rem 3rem;
   width: 95%;
   background-color: var(--blanco);
@@ -518,3 +531,4 @@ aside  {
 .swal2-styled.swal2-confirm {
   font-size: 1.5rem !important;
 }
+

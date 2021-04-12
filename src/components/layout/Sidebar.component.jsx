@@ -5,12 +5,7 @@ const Sidebar = () => {
     return ( 
         <Fragment>
              <aside>
-                <h1>
-                    Módulos 
-                </h1>
-                <div className="proyectos">
-                    <MenuItem/>
-                </div>
+                <MenuItem/>
             </aside>
         </Fragment>
      );

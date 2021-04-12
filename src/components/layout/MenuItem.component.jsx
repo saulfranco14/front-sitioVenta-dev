@@ -1,59 +1,27 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
 import {
-    TitleMenuItem
-} from '../../styles/MenuStyles.styles';
+    AsideIcon
+} from '../styledcomponents/header.styles'
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import Tooltip from '@material-ui/core/Tooltip';
+import AssessmentIcon from '@material-ui/icons/Assessment';
+
 
 const MenuItem = () => {
     return ( 
         <Fragment>
-             <Link to={'/users'} >
-                <TitleMenuItem> 
-                    {"  "}
-                    Excel 
-                </TitleMenuItem> 
+            <Link to={'/dashboard'} >
+                <Tooltip title="Dashboard" placement="right-start">
+                    <DashboardIcon fontSize="large" /> 
+                </Tooltip>
             </Link>
-            <Link to={'/usuarios'} >
-                <TitleMenuItem> 
-                    {"  "}
-                    Usuarios 
-                </TitleMenuItem> 
-            </Link>
-            <Link to={'/users'} >
-                <TitleMenuItem> 
-                    {"  "}
-                    Prendas 
-                </TitleMenuItem> 
-            </Link>
-            <Link to={'/users'} >
-                <TitleMenuItem> 
-                    {"  "}
-                    Cortes 
-                </TitleMenuItem> 
-            </Link>
-            <Link to={'/users'} >
-                <TitleMenuItem> 
-                    {"  "}
-                    Modelos 
-                </TitleMenuItem> 
-            </Link>
-            <Link to={'/users'} >
-                <TitleMenuItem> 
-                    {"  "}
-                    Tallas 
-                </TitleMenuItem> 
-            </Link>
-            <Link to={'/users'} >
-                <TitleMenuItem> 
-                    {"  "}
-                    Colores 
-                </TitleMenuItem> 
-            </Link>
-            <Link to={'/users'} >
-                <TitleMenuItem> 
-                    {"  "}
-                    Clientes 
-                </TitleMenuItem> 
+            <Link to={'/reportes'} >
+                <AsideIcon>
+                    <Tooltip title="Reportes" placement="right-start">
+                        <AssessmentIcon fontSize="large" /> 
+                    </Tooltip>
+                </AsideIcon>
             </Link>
         </Fragment>
      );

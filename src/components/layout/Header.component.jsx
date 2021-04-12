@@ -30,7 +30,7 @@ const Header = () => {
              <header className="app-header">
                 {/* Navegación */}
                 <div className="nav-header">
-                    <Link to={'/users'} >
+                    <Link to={'/products'} >
                         <IconHeader>
                             <StarsIcon fontSize="large" /> 
                             <LinkHeader> 
@@ -89,7 +89,6 @@ const Header = () => {
                     </Link>
                 </div>
                 <nav className="nav-principal">
-                    
                     {
                         user ? 
                             <h5 className="nombre-usuario">Hola :{" "}<span>{ user.auth.nombre }</span></h5>

@@ -4,7 +4,7 @@ import MenuItem from './MenuItem.component';
 const Sidebar = () => {
     return ( 
         <Fragment>
-             <aside>
+            <aside>
                 <MenuItem/>
             </aside>
         </Fragment>

@@ -6,10 +6,13 @@ import AlertState                                 from './context/alert/alertSta
 import AuthState                                  from './context/auth/authState';
 import ContactState                               from './context/contact/contactState';
 import authToken                                  from './config/auth';
+
 import Login                                      from '../src/components/auth/Login.component';
+
 import Dashboard                                  from '../src/components/menu/Dashboard.component';
 import Reportes                                   from '../src/components/reportes/Reportes.component';
 import Caja                                       from '../src/components/caja/Caja.component';
+import Inventario                                 from '../src/components/inventario/Inventario.component'
 
 import Usuarios                                   from '../src/components/usuarios/Usuarios.component';
 import CreateUser                                 from '../src/components/users/CreateUser.component';
@@ -46,9 +49,10 @@ function App() {
                 <RoutePrivate exact path="/dashboard"     component={Dashboard} />
                 <RoutePrivate exact path="/reportes"      component={Reportes} />
                 <RoutePrivate exact path="/caja"          component={Caja} />
+                <RoutePrivate exact path="/inventario"    component={Inventario} />
 
                 <RoutePrivate exact path="/create-user"   component={CreateUser} />
-                
+
               </Switch>
             </Router>
           </ContactState>

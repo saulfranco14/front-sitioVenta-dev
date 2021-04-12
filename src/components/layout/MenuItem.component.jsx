@@ -7,6 +7,7 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import Tooltip from '@material-ui/core/Tooltip';
 import AssessmentIcon from '@material-ui/icons/Assessment';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import StoreIcon from '@material-ui/icons/Store';
 
 
 
@@ -32,6 +33,14 @@ const MenuItem = () => {
                     </Tooltip>
                 </AsideIcon>
             </Link>
+            <Link to={'/inventario'} >
+                <AsideIcon>
+                    <Tooltip title="Inventario" placement="right-start">
+                        <StoreIcon fontSize="large" /> 
+                    </Tooltip>
+                </AsideIcon>
+            </Link>
+            
         </Fragment>
      );
 }

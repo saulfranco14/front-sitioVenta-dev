@@ -9,9 +9,8 @@ export const DisplayDiv = styled.div`
 // Product
 export const ViewProduct = styled.div`
     display: flex;
+    flex-direction: column;
     flex: 80;
-    flex-direction: row;
-    justify-content: space-between;
 `
 export const TitleProduct = styled.h1`
     margin-top: 4rem;
@@ -39,4 +38,15 @@ export const AddProduct = styled.button`
 export const TextButtonAd = styled.p`
     margin-top: 2px;
     margin-left: 10px;
+`
+
+export const DivButtonTitle = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
+export const TableDataGrid = styled.div`
+    margin-left: 5%;
+    height: 500px;
+    width: 90%;
 `

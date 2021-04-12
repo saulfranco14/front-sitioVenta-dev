@@ -34,6 +34,40 @@ export const columnsUser = [
   },
 ];
 
+export const columnsProducts = [
+  { field: 'nombre',            headerName: 'Nombre',             width: 300 },
+  { field: 'modelo',            headerName: 'Modelo',             width: 100 },
+  { field: 'tipo',              headerName: 'Tipo',               width: 150 },
+  { field: 'precio',            headerName: 'Precio',             width: 180 },
+  {
+    field: "",
+    headerName: "Editar",
+    sortable: false,
+    width: 100,
+    disableClickEventBubbling: true,
+    renderCell: ( params ) => {
+    return  <button
+                  type        ="button"
+                  className   ="btn btn-editar"
+                  onClick     = { (  )=> handleClick(`${ params.getValue('_id') }`) }
+              >
+                  Editar
+              </button>;
+  }
+},
+{
+  field: "activo",
+  headerName: "Activo",
+  sortable: false,
+  width: 150,
+  disableClickEventBubbling: true,
+  renderCell: ( params ) => {
+    active = params.getValue('active') === true ? <button type ="button" className   ="btn btn-success"> Activo </button> : <button type ="button" className   ="btn btn-eliminar"> Desactivo </button> ;
+    return  active
+  }
+},
+];
+
 
 
 const handleClick = (id) =>{

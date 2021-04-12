@@ -12,7 +12,7 @@ import {
     DivButtonTitle
 } from '../styledcomponents/viewComponent.styles';
 
-const Dashboard = () => {
+const Reportes = () => {
     const authToken             = useContext( authContext );
     const { getUserByAuth  }    = authToken;
 
@@ -30,7 +30,7 @@ const Dashboard = () => {
                         <Sidebar/>
                         <ViewProduct>
                             <DivButtonTitle>
-                                <TitleProduct>Dashboard</TitleProduct>
+                                <TitleProduct>Reportes</TitleProduct>
                             </DivButtonTitle>
                         </ViewProduct>
                     </DisplayDiv>
@@ -40,4 +40,4 @@ const Dashboard = () => {
      );
 }
  
-export default Dashboard;
+export default Reportes;

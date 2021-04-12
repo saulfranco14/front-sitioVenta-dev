@@ -10,7 +10,6 @@ import {
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import PeopleIcon from '@material-ui/icons/People';
 import DescriptionIcon from '@material-ui/icons/Description';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import CardTravelIcon from '@material-ui/icons/CardTravel';
 import StarsIcon from '@material-ui/icons/Stars';
@@ -38,7 +37,7 @@ const Header = () => {
                             </LinkHeader>
                         </IconHeader>
                     </Link>
-                    <Link to={'/users'} >
+                    <Link to={'/pedidos'} >
                         <IconHeader>
                             <CardTravelIcon fontSize="large" /> 
                             <LinkHeader> 
@@ -47,7 +46,7 @@ const Header = () => {
                         </IconHeader>
                     </Link>
         
-                    <Link to={'/users'} >
+                    <Link to={'/ventas'} >
                         <IconHeader>
                             <MonetizationOnIcon fontSize="large" /> 
                             <LinkHeader> 
@@ -55,15 +54,7 @@ const Header = () => {
                             </LinkHeader>
                         </IconHeader>
                     </Link>
-                    <Link to={'/users'} >
-                        <IconHeader>
-                            <ShoppingBasketIcon fontSize="large" /> 
-                            <LinkHeader> 
-                                Caja
-                            </LinkHeader>
-                        </IconHeader>
-                    </Link>
-                    <Link to={'/users'} >
+                    <Link to={'/facturacion'} >
                         <IconHeader>
                             <DescriptionIcon fontSize="large" /> 
                             <LinkHeader> 
@@ -71,7 +62,7 @@ const Header = () => {
                             </LinkHeader>
                         </IconHeader>
                     </Link>
-                    <Link to={'/users'} >
+                    <Link to={'/clientes'} >
                         <IconHeader>
                             <PeopleIcon fontSize="large" /> 
                             <LinkHeader> 
@@ -79,7 +70,7 @@ const Header = () => {
                             </LinkHeader>
                         </IconHeader>
                     </Link>
-                    <Link to={'/users'} >
+                    <Link to={'/usuarios'} >
                         <IconHeader>
                             <AccountCircleIcon fontSize="large" /> 
                             <LinkHeader> 
